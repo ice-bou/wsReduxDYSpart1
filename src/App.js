@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import { useDispatch, useSelector } from 'react-redux';
 import './App.css';
+import HomeCounter from './Components/HomeCounter';
+import { handleShow } from './Redux/Action';
+
 
 function App() {
+  const show = useSelector(state=>state.show)
+  const dispatch= useDispatch()
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{fontSize: '50px', margin: '50px'}}>
+ {
+  show && <HomeCounter/>
+ }
+    <button onClick={()=>dispatch(handleShow())}> Show </button> 
+
+
     </div>
   );
 }

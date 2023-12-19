@@ -1,0 +1,7 @@
+export const DECREMENT = 'DECREMENT'
+export const INCREMENT = 'INCREMENT'
+export const ADDNUMBER = 'ADDNUMBER'
+export const RESET = 'RESET' 
+export const HANDLESHOW = 'HANDLESHOW'
+export const SECINPUT = 'SECINPUT'
+export const SHOWMORE = 'SHOWMORE'
